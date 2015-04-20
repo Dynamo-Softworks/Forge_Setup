@@ -1,0 +1,22 @@
+package com.ncd1998.nmod.Util;
+
+import com.ncd1998.nmod.Reference.MCEntityPaths;
+
+import net.minecraft.entity.Entity;
+
+public class EntityHelper {
+	public static boolean isEntityEnderMob(Entity ent){
+		boolean flag = false;
+		if(ent.getClass().getName().equals(MCEntityPaths.ENDERMAN)){
+			flag = true;
+		}
+		if(ent.getClass().getName().equals(MCEntityPaths.ENDERMITE)){
+			flag = true;
+		}
+		if(ent.getClass().getName().equals(MCEntityPaths.ENDERDRAGON)){
+			flag = true;
+		}
+		
+		return flag;
+	}
+}

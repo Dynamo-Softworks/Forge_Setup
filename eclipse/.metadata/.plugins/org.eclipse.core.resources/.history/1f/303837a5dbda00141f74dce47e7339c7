@@ -1,0 +1,44 @@
+package com.ncd1998.nmod.Util;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.world.World;
+
+import com.ncd1998.nmod.Projectile.DeathRayProjectile;
+
+public class SpellHandler {
+	//Beam Spells / Projectile spells
+	public static void spellDeathBeam(World WorldIn,EntityPlayer PlayerIn){
+		if (!WorldIn.isRemote)
+        {
+        	for(int i = 0; i <= 50; i++){
+        	WorldIn.spawnParticle(EnumParticleTypes.FLAME, PlayerIn.getPosition().getX(), PlayerIn.getPosition().getY(), PlayerIn.getPosition().getZ(), 0, 0, 0);
+        	}
+        	DeathRayProjectile skull = new DeathRayProjectile(WorldIn, PlayerIn.getPosition().getX(), PlayerIn.getPosition().getY() + 3, PlayerIn.getPosition().getZ(), PlayerIn.getLookVec().xCoord, PlayerIn.getLookVec().yCoord, PlayerIn.getLookVec().zCoord);
+            WorldIn.spawnEntityInWorld(skull);
+            
+        
+        }
+	}
+	//Teleport Spells
+	public static void escapeToOverworld(EntityPlayer playerIn){
+		playerIn.travelToDimension(0);
+		playerIn.respawnPlayer();
+	}
+	
+	//Buff Spells
+	public static void dragonSkin(world worldIn EntityPlayer PlayerIn){
+		WorldIn.spawnParticle(EnumParticleTypes.EXPLOSION_HUGE, PlayerIn.getPosition().getX(), PlayerIn.getPosition().getY(), PlayerIn.getPosition().getZ(), 0, 0, 0);
+		PlayerIn.addPotionEffect(new PotionEffect(Potion.absorption.getId(), 6000, 45));
+	 	PlayerIn.addPotionEffect(new PotionEffect(Potion.damageBoost.getId(), 6000, 5));
+	 	PlayerIn.addPotionEffect(new PotionEffect(Potion.jump.getId(), 6000, 5));
+	 	PlayerIn.addPotionEffect(new PotionEffect(Potion.fireResistance.getId(), 6000, 1));
+	 	PlayerIn.addPotionEffect(new PotionEffect(Potion.resistance.getId(), 6000, 2));
+	 	PlayerIn.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 6000, 2));
+	 	PlayerIn.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 6000, 5));
+	 	PlayerIn.addPotionEffect(new PotionEffect(Potion.digSpeed.getId(), 6000, 45));
+	}
+}

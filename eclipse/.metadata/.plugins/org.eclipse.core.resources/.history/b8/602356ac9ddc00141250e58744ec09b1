@@ -1,0 +1,8 @@
+package com.ncd1998.nmod.Init;
+
+import net.minecraft.item.Item.ToolMaterial;
+
+public class NMaterials {
+	public static ToolMaterial CobaltMaterial;
+	
+}

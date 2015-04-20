@@ -1,0 +1,7 @@
+package com.ncd1998.nmod;
+
+public class NmodSmeltingRecipes {
+	public static void addRecipes(){
+		
+	}
+}

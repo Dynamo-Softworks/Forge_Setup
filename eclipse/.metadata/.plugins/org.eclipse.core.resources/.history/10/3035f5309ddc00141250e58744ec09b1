@@ -1,0 +1,30 @@
+package com.ncd1998.nmod.Init;
+
+import com.ncd1998.nmod.Blocks.AbsorbiumOre;
+import com.ncd1998.nmod.Blocks.BlockSkyCobaltBlock;
+import com.ncd1998.nmod.Blocks.ChargedNetherQuartzOre;
+import com.ncd1998.nmod.Blocks.SkyCobaltOre;
+import com.ncd1998.nmod.Blocks.VoiditeOre;
+import com.ncd1998.nmod.Blocks.VolitiliumOre;
+
+import net.minecraft.block.Block;
+
+public class NBlocks {
+	 //blocks
+    public static Block SkyCobaltBlock;
+    public static Block SkyCobaltOre;
+    public static Block AbsorbiumOre;
+    public static Block VolitiliumOre;
+    public static Block VoiditeOre;
+    public static Block ChargedNetherQuartzOre;
+    public static Block GlimmerStone;
+    public static void init(){
+    	//Blocks
+    	SkyCobaltBlock = new BlockSkyCobaltBlock();
+    	SkyCobaltOre = new SkyCobaltOre();
+    	AbsorbiumOre = new AbsorbiumOre();
+    	VolitiliumOre = new VolitiliumOre();
+    	VoiditeOre = new VoiditeOre();
+    	ChargedNetherQuartzOre = new ChargedNetherQuartzOre();
+    }
+}
