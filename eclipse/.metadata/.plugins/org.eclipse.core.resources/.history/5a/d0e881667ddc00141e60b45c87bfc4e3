@@ -1,5 +1,0 @@
-package com.ncd1998.nmod.Reference;
-
-public class Reference {
-	public static final String MOD_ID = "nmod";
-}

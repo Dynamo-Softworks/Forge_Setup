@@ -1,7 +1,0 @@
-package com.ncd1998.nmod;
-
-import net.minecraftforge.fml.common.IWorldGenerator;
-
-public class NmodWorldGenerator implements IWorldGenerator{
-
-}

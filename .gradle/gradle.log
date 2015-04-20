@@ -21,20 +21,17 @@
 :mergeJars SKIPPED
 :deobfuscateJar SKIPPED
 :decompile SKIPPED
-:processSources
-Injecting fml files
-Applying fml patches
-Applying forge patches
-:remapJar
-:extractMinecraftSrc
-:recompMinecraftNote: Some input files use or override a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: Some input files use unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-
-:repackMinecraft
+:processSources SKIPPED
+:remapJar SKIPPED
+:extractMinecraftSrc SKIPPED
+:recompMinecraft SKIPPED
+:repackMinecraft SKIPPED
 :setupDecompWorkspace
+:eclipseClasspath
+:eclipseJdt
+:eclipseProject
+:eclipse
 
 BUILD SUCCESSFUL
 
-Total time: 7 mins 57.674 secs
+Total time: 22.599 secs

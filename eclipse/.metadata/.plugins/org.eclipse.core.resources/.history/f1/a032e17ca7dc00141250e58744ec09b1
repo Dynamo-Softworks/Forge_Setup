@@ -1,6 +1,0 @@
-package com.ncd1998.nmod.Reference;
-
-public class MCEnitityPaths {
-	public static final String ENDERMAN = "net.minecraft.entity.monster.EntityEnderman";
-	public static final String ENDERMITE = "net.minecraft.entity.monster.EntityEndermite";
-}
